@@ -6,14 +6,14 @@ Open to working student roles (up to 20 hours a week). [LinkedIn](https://www.li
 
 ## Skills
 
-| | |
+| Area | Tools |
 |---|---|
-| **Languages** | <img src="https://skillicons.dev/icons?i=py,ts,js,cpp" alt="Python, TypeScript, JavaScript, C++" height="40" /> &nbsp; SQL |
-| **Backend** | <img src="https://skillicons.dev/icons?i=fastapi,nestjs,nodejs,express,graphql" alt="FastAPI, NestJS, Node.js, Express, GraphQL" height="40" /> &nbsp; REST · SQLAlchemy · Alembic |
-| **Frontend** | <img src="https://skillicons.dev/icons?i=react,redux,vite,tailwind" alt="React, Redux, Vite, Tailwind CSS" height="40" /> &nbsp; TanStack Query |
-| **Data** | <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis" alt="PostgreSQL, MySQL, MongoDB, Redis" height="40" /> &nbsp; Row-level security · ChromaDB |
-| **Cloud & DevOps** | <img src="https://skillicons.dev/icons?i=aws,docker,githubactions,linux" alt="AWS, Docker, GitHub Actions, Linux" height="40" /> &nbsp; Railway · CI/CD |
-| **Testing** | <img src="https://skillicons.dev/icons?i=vitest" alt="Vitest" height="40" /> &nbsp; pytest · Playwright |
+| **Languages** | Python · TypeScript · JavaScript · SQL · C++ |
+| **Backend** | FastAPI · SQLAlchemy · Alembic · REST · NestJS · Node.js · Express · GraphQL |
+| **Frontend** | React · TanStack Query · Redux · Vite · Tailwind CSS |
+| **Data** | PostgreSQL (row-level security) · MySQL · MongoDB · Redis · ChromaDB |
+| **Cloud & DevOps** | Docker · GitHub Actions · Railway · AWS · Linux |
+| **Testing** | pytest · Vitest · Playwright |
 | **AI & LLMs** | LangChain · LangGraph · CrewAI · MCP · RAG · OpenAI and Anthropic APIs · LLM observability · scikit-learn · pandas · NumPy |
 
 ## Spanlight
@@ -25,6 +25,8 @@ Open to working student roles (up to 20 hours a week). [LinkedIn](https://www.li
 - **Gateway**: one base URL for OpenAI and Anthropic clients, with retries, fallbacks, caching and budgets that block
 - **Prompts and evals**: versioned prompts, datasets, LLM judges on a budget, experiments, and a GitHub Action that fails a pull request when quality drops
 - **Self-hosted on one Postgres**, MIT licensed
+
+**How it's built:** tenant isolation enforced by Postgres row-level security on every project table, idempotent ingestion, and 2,000+ backend tests, including failure injection (killed connections, interrupted streams, concurrent budget checks) against a real database. Live at [spanlight.dev](https://spanlight.dev).
 
 [Live demo](https://spanlight.dev) · [Docs](https://spanlight.dev/docs/) · [Repository](https://github.com/dheerajkarwasra/spanlight) · [PyPI](https://pypi.org/project/spanlight/)
 
